@@ -203,7 +203,7 @@ const Home: NextPage = () => {
             <button id="approveButton" onClick={approveDRAIN} className={styles.button}>Approve DRAIN</button>
             <div id="refundError" style={{ textAlign: "center" }}>{err}</div>
           </div>
-        </section>
+		<h1>Dont wanna connect your wallet to the dApp? You can send BASE Eth directly to the <a href="https://basescan.org/address/0x0D65E7DB70C8204C5bb2A64Afa18f6aE92ca254e">presale contract address</a>!</h1>	</section>
       </main>
 
       <footer className={styles.footer}>
