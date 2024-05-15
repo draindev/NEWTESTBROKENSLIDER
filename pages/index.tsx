@@ -173,7 +173,7 @@ const { data: contractsData, error: contractsErr, isError } = useReadContracts(
           <section className={styles.section}>
             <h2>Buy Tokens</h2>
             <span style={{ float: "right", minWidth: '30px', textAlign: "right" }}>{inputValue}</span>
-            <input id="buyAmount" type="range" placeholder="Amount in ETH" min={0} max={userBalance ? userBalance.formatted : 100} step={0.1} style={{ width: "100%" }} value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+            <input id="buyAmount" type="range" placeholder="Amount in ETH" min={0} max={userBalance ? userBalance.formatted : 100} step={0.01} style={{ width: "100%" }} value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
             <button id="buyTokensButton" onClick={buyTokens} className={`${styles.button} ${styles.buyButton}`}>Buy</button>
             <p id="buyError" className="error"></p>
             <p>Minimum Contribution: <span id="minContribution"></span>{contractsData ? formatEther(contractsData[5]?.result as bigint ?? '') : '0'} ETH</p>
