@@ -98,43 +98,40 @@ const Home: NextPage = () => {
     })
   };
 
-  const { data: contractsData, error: contractsErr, isError } = useReadContracts(
-    {
-      contracts: [
-        {
-          ...presaleContract,
-          functionName: 'owner'
-        },
-        {
-          ...presaleContract,
-          functionName: 'softCap'
-        },
-        {
-          ...presaleContract,
-          functionName: 'hardCap'
-        },
-        {
-          ...presaleContract,
-          functionName: 'endTime'
-        },
-        {
-          ...presaleContract,
-          functionName: 'totalRaised'
-        },
-        {
-          ...presaleContract,
-          functionName: 'minContribution'
-        },
-        {
-          ...presaleContract,
-          functionName: 'maxContribution'
-        },
-	query:{
-        enabled: account.isConnected,
+const { data: contractsData, error: contractsErr, isError } = useReadContracts(
+  {
+    contracts: [
+      {
+        ...presaleContract,
+        functionName: 'owner'
+      },
+      {
+        ...presaleContract,
+        functionName: 'softCap'
+      },
+      {
+        ...presaleContract,
+        functionName: 'hardCap'
+      },
+      {
+        ...presaleContract,
+        functionName: 'endTime'
+      },
+      {
+        ...presaleContract,
+        functionName: 'totalRaised'
+      },
+      {
+        ...presaleContract,
+        functionName: 'minContribution'
+      },
+      {
+        ...presaleContract,
+        functionName: 'maxContribution'
       }
-    },
-
-  )
+    ]
+  }
+);
 
 
   useEffect(() => {
